@@ -95,25 +95,6 @@
             overflow: hidden;
         }
 
-        .hero-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            pointer-events: none;
-        }
-
-        .hero-section::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-        }
-
         .text-primary-custom{
             color: var(--primary);
         }
@@ -329,7 +310,7 @@
         }
 
         /* Responsive */
-        @media (max-width: 991.98px) {
+        @media (min-width: 991.98px) {
             .hero-section {
                 padding: 100px 0 60px;
                 text-align: center;
