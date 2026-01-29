@@ -244,6 +244,7 @@
         .feature-card {
             background: var(--card);
             border-left: 4px solid var(--accent);
+            border-left: 4px solid var(--accent);
             padding: 40px 32px;
             border-radius: 16px;
             transition: all 0.3s ease;
@@ -251,7 +252,7 @@
         }
 
         .feature-card:hover {
-            border-left-color: var(--primary);
+            border-color: var(--primary);
             background: var(--card-hover);
             transform: translateY(-4px);
         }
@@ -331,7 +332,7 @@
         }
 
         /* Responsive */
-        @media (max-width: 991.98px) {
+        @media (min-width: 991.98px) {
             .hero-section {
                 padding: 100px 0 60px;
                 text-align: center;
@@ -342,9 +343,10 @@
                 margin-right: auto;
             }
 
+
             .profile-img {
-                width: 220px;
-                height: 220px;
+                width: 250px;
+                height: 250px;
             }
         }
 
@@ -353,6 +355,7 @@
                 width: 180px;
                 height: 180px;
             }
+
 
             .feature-card {
                 padding: 32px 24px;
