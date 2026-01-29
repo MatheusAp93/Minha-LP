@@ -87,12 +87,33 @@
             display: flex;
             align-items: center;
             padding: 120px 0 80px;
+            background: var(--background);
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
             background: 
                 linear-gradient(to bottom, rgba(26, 28, 32, 0.75), rgba(26, 28, 32, 0.7)),
                 url('/bg-abstractpoligon-green.jpg');
             background-size:cover;
             background-position: center;
-            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .hero-section::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
         }
 
         .text-primary-custom{
@@ -223,7 +244,6 @@
         .feature-card {
             background: var(--card);
             border-left: 4px solid var(--accent);
-            border-bottom: 4px solid var(--accent);
             padding: 40px 32px;
             border-radius: 16px;
             transition: all 0.3s ease;
@@ -271,11 +291,7 @@
 
         /* CTA */
         .cta-section {
-            background: 
-            linear-gradient(to bottom, rgba(26, 28, 32, 0.75), rgba(26, 28, 32, 0.7)),
-            url('/bg-abstractpoligon-green.jpg');
-            background-size:cover;
-            background-position: center;
+            background-color: var(--background);
             padding: 100px 0;
             position: relative;
         }
@@ -287,6 +303,11 @@
             left: 0;
             right: 0;
             bottom: 0;
+            background: 
+            linear-gradient(to bottom, rgba(26, 28, 32, 0.75), rgba(26, 28, 32, 0.7)),
+            url('/bg-abstractpoligon-green.jpg');
+            background-size:cover;
+            background-position: center;
             pointer-events: none;
         }
 
@@ -310,7 +331,7 @@
         }
 
         /* Responsive */
-        @media (min-width: 991.98px) {
+        @media (max-width: 991.98px) {
             .hero-section {
                 padding: 100px 0 60px;
                 text-align: center;
