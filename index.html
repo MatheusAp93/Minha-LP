@@ -241,6 +241,7 @@
             justify-content: center;
             font-size: 1.5rem;
             margin-bottom: 20px;
+            margin-inline: auto;
         }
 
         .feature-icon-green {
@@ -254,7 +255,7 @@
         }
 
         .feature-title {
-            font-size: 1.75rem;
+            font-size: 1.5rem;
             font-weight: 700;
             margin-bottom: 12px;
         }
@@ -308,22 +309,35 @@
         }
 
         /* Responsive */
-        @media (min-width: 991.98px) {
+        @media (max-width: 991.98px) {
             .hero-section {
                 padding: 100px 0 60px;
                 text-align: center;
             }
 
+            .hero-title {
+            font-size: 1.75rem;
+            line-height: 1.1;
+            text-align: center;
+            }
+
             .hero-subtitle {
                 margin-left: auto;
                 margin-right: auto;
+                font-size: 1.5rem;
+                text-align:center;
             }
-
 
             .profile-img {
                 width: 250px;
                 height: 250px;
             }
+
+            .botoes-hero{
+                justify-content: center;
+            }
+
+
         }
 
         @media (max-width: 575.98px) {
@@ -332,9 +346,22 @@
                 height: 180px;
             }
 
+            .hero-title {
+            font-size: 1.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1rem;
+                text-align:center;
+            }
+
 
             .feature-card {
                 padding: 32px 24px;
+            }
+
+            .feature-title,.feature-description {
+                text-align: center;
             }
         }
 
@@ -362,7 +389,7 @@
                             Crio páginas de vendas que carregam rápido, aparecem no Google 
                             e funcionam perfeitamente no celular. Mais visitas, mais clientes.
                         </p>
-                        <div class="d-flex flex-column flex-sm-row gap-3">
+                        <div class="botoes-hero d-flex flex-column flex-sm-row gap-3">
                             <a href="#contato" class="btn-primary-custom">
                                 <i class="bi bi-lightning-charge-fill"></i>
                                 Quero minha LP agora
@@ -402,7 +429,7 @@
                     </p>
                 </div>
                 <div class="row g-4">
-                    <div class="col-md-6 col-lg-4">
+                    <div class=" col-md-6 col-lg-4">
                         <div class="feature-card">
                             <div class="feature-icon feature-icon-green">
                                 <i class="bi bi-code-slash"></i>
